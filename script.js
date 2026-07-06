@@ -487,7 +487,7 @@ const courseData = {
 };
 
 // 6. Real-time Router Routing Injection & Interactive Accordion Setup
-if (window.location.pathname.includes('course.html')) {
+if (window.location.pathname.includes('course')) {
     const urlParams = new URLSearchParams(window.location.search);
     const categoryId = urlParams.get('id');
     const container = document.getElementById('course-detail-container');
