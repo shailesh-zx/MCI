@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maa Computer Institute</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html#home" class="logo">
+                <img src="assets/mci-full.png" alt="Maa Computer Institute" class="logo-img">
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="menu-overlay" id="menuOverlay"></div>
+
+            <nav class="nav-links" id="navLinks">
+                <button class="close-menu" id="closeMenu" aria-label="Close menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <a href="index.html#home">Home</a>
+                <a href="index.html#courses">Courses</a>
+                <a href="index.html#branches">Branches</a>
+                <a href="index.html#courier">Courier Service</a>
+                
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" id="contactToggle">Contact <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown-menu" id="contactDropdown">
+                        <a href="https://wa.me/918235936751" target="_blank" class="dropdown-item"><i class="fa-brands fa-whatsapp ws-icon"></i> WhatsApp</a>
+                        <a href="https://instagram.com/maa.computer.institute" target="_blank" class="dropdown-item"><i class="fa-brands fa-instagram insta-icon"></i> Instagram</a>
+                        <a href="tel:+918235936751" class="dropdown-item"><i class="fa-solid fa-phone phone-icon"></i> Phone</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title">
+                <span id="typewriter"></span><span class="typewriter-cursor">|</span>
+            </h1>
+            <h2 class="hero-subtitle">Empower Your Future with Advanced Computer Education</h2>
+            <div class="admission-tag">🎉 ADMISSION OPEN! 🎉</div>
+        </div>
+        
+        <a href="#courses" class="scroll-down">
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <section id="courses" class="courses-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Featured Courses</h2>
+                <p>We provide comprehensive learning pathways tailored from foundational basics up to professional advanced levels.</p>
+            </div>
+            
+            <div class="grid-container">
+                <a href="course.html?id=diploma" class="card course-link">
+                    <div class="icon-wrapper"><i class="fa-solid fa-graduation-cap card-icon" style="color: #00d26a;"></i></div>
+                    <h3>Diploma Programs</h3>
+                    <ul><li>DCA</li><li>ADCA</li><li>PGDCA</li><li>DOA</li><li>DTP</li></ul>
+                </a>
+                
+                <a href="course.html?id=office" class="card course-link">
+                    <div class="icon-wrapper"><i class="fa-solid fa-folder-open card-icon" style="color: #1e88e5;"></i></div>
+                    <h3>Office Automation</h3>
+                    <ul><li>MS Word</li><li>MS Excel</li><li>MS PowerPoint</li><li>Beltron Data Entry</li></ul>
+                </a>
+                
+                <a href="course.html?id=hardware" class="card course-link">
+                    <div class="icon-wrapper"><i class="fa-solid fa-screwdriver-wrench card-icon" style="color: #ff9800;"></i></div>
+                    <h3>Hardware & Systems</h3>
+                    <ul><li>PC Hardware Basics</li><li>Software Installation</li><li>Windows Deployment</li><li>System Troubleshooting</li></ul>
+                </a>
+                
+                <a href="course.html?id=accounting" class="card course-link">
+                    <div class="icon-wrapper"><i class="fa-solid fa-calculator card-icon" style="color: #e91e63;"></i></div>
+                    <h3>Professional Accounting</h3>
+                    <ul><li>Tally ERP 9</li><li>Tally Prime</li><li>Accounting Core Principles</li></ul>
+                </a>
+                
+                <a href="course.html?id=design" class="card course-link">
+                    <div class="icon-wrapper"><i class="fa-solid fa-palette card-icon" style="color: #4caf50;"></i></div>
+                    <h3>Design & Graphics</h3>
+                    <ul><li>Adobe Photoshop</li><li>Adobe PageMaker</li><li>CorelDraw</li><li>AutoCAD Certification</li></ul>
+                </a>
+                
+                <a href="course.html?id=internet" class="card course-link">
+                    <div class="icon-wrapper"><i class="fa-solid fa-globe card-icon" style="color: #0ea5e9;"></i></div>
+                    <h3>Internet & Online Works</h3>
+                    <ul>
+                        <li>Internet Fundamentals</li>
+                        <li>Online Form Fill-up</li>
+                        <li>Digital Payments & Services</li>
+                        <li>Digital Seva Portal</li>
+                    </ul>
+                </a>
+
+                <a href="course.html?id=typing" class="card course-link">
+                    <div class="icon-wrapper"><i class="fa-solid fa-keyboard card-icon" style="color: #9c27b0;"></i></div>
+                    <h3>Speed Typing</h3>
+                    <ul><li>Hindi Typing Mastery</li><li>English Typing Mastery</li></ul>
+                    <div class="highlight-tag">45 Days Fast-Track!</div>
+                </a>
+
+                <a href="course.html?id=english" class="card course-link">
+                    <div class="icon-wrapper"><i class="fa-solid fa-comments card-icon" style="color: #f43f5e;"></i></div>
+                    <h3>Spoken English</h3>
+                    <ul><li>Grammar & Vocabulary</li><li>Fluency Practice</li><li>Interview Preparation</li><li>Personality Development</li></ul>
+                    <div class="highlight-tag">New Batch!</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="courier" class="courier-section">
+        <div class="container text-center">
+            <h2><i class="fa-solid fa-truck-fast"></i> Trackon Courier Service</h2>
+            <p class="courier-subtitle">Expanding horizons beyond excellence in tech education—we offer seamless, secure, and rapid <strong>All India Shipment Solutions</strong>.</p>
+            <p class="courier-cta">Reach out to us to securely dispatch your parcels and documents to any corner of the country!</p>
+        </div>
+    </section>
+
+    <section id="branches" class="branches-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Campus Network & Schedules</h2>
+            </div>
+            <div class="branch-grid">
+                <div class="branch-card">
+                    <div class="shift-tag morning">Morning Session</div>
+                    <h3>Primary Branch</h3>
+                    <p><i class="fa-solid fa-location-dot location-icon"></i> Kateya, Gopalganj, Bihar - 841437</p>
+                    <div class="timing-box"><p><i class="fa-regular fa-clock"></i> Hours: 09:00 AM - 01:00 PM</p></div>
+                </div>
+                <div class="branch-card">
+                    <div class="shift-tag evening">Evening Session</div>
+                    <h3>Secondary Branch</h3>
+                    <p><i class="fa-solid fa-location-dot location-icon"></i> Sohnariya, Kateya, Gopalganj, Bihar - 841437</p>
+                    <div class="timing-box"><p><i class="fa-regular fa-clock"></i> Hours: 02:00 PM - 06:00 PM</p></div>
+                </div>
+            </div>
+            <p class="director-text text-center">
+                Under the Visionary Academic Guidance of: <span class="director-name">Azad Sir</span>
+            </p>
+        </div>
+    </section>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col about-col">
+                <img src="assets/mci-full.png" alt="MCI Logo" class="footer-logo">
+                <p>Empower Your Future with Advanced Computer Education. Leading institute in Kateya providing core technical and professional skills.</p>
+            </div>
+            
+            <div class="footer-col links-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html#home"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                    <li><a href="index.html#courses"><i class="fa-solid fa-chevron-right"></i> Our Courses</a></li>
+                    <li><a href="index.html#branches"><i class="fa-solid fa-chevron-right"></i> Campus Network</a></li>
+                    <li><a href="index.html#courier"><i class="fa-solid fa-chevron-right"></i> Courier Service</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col contact-col">
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Kateya, Gopalganj, Bihar - 841437</p>
+                <p><i class="fa-solid fa-phone"></i> +91 8235936751</p>
+                <p><i class="fa-solid fa-envelope"></i> maaenterprises242@gmail.com</p>
+            </div>
+            
+            <div class="footer-col social-col">
+                <h3>Connect With Us</h3>
+                <p class="social-text">Follow our handles or message us directly for admission updates.</p>
+                <div class="footer-social-links">
+                    <a href="https://wa.me/918235936751" target="_blank" class="social-icon ws" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/maa.computer.institute" target="_blank" class="social-icon insta" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="tel:+918235936751" class="social-icon phone" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Maa Computer Institute. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

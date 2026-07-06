@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Layout & Details | Maa Computer Institute</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/mci-full.png" alt="Maa Computer Institute" class="logo-img">
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="menu-overlay" id="menuOverlay"></div>
+
+            <nav class="nav-links" id="navLinks">
+                <button class="close-menu" id="closeMenu" aria-label="Close menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <a href="index.html#home">Home</a>
+                <a href="index.html#courses">Courses</a>
+                <a href="index.html#branches">Branches</a>
+                
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" id="contactToggle">Contact <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown-menu" id="contactDropdown">
+                        <a href="https://wa.me/918235936751" target="_blank" class="dropdown-item"><i class="fa-brands fa-whatsapp ws-icon"></i> WhatsApp</a>
+                        <a href="https://instagram.com/maa.computer.institute" target="_blank" class="dropdown-item"><i class="fa-brands fa-instagram insta-icon"></i> Instagram</a>
+                        <a href="tel:+918235936751" class="dropdown-item"><i class="fa-solid fa-phone phone-icon"></i> Phone</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="courses-section" style="min-height: 82vh; padding-top: 40px;">
+        <div class="container" id="course-detail-container">
+            </div>
+    </section>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col about-col">
+                <img src="assets/mci-full.png" alt="MCI Logo" class="footer-logo">
+                <p>Empower Your Future with Advanced Computer Education. Leading institute in Kateya providing core technical and professional skills.</p>
+            </div>
+            
+            <div class="footer-col contact-col">
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Kateya, Gopalganj, Bihar - 841437</p>
+                <p><i class="fa-solid fa-phone"></i> +91 8235936751</p>
+                <p><i class="fa-solid fa-envelope"></i> maaenterprises242@gmail.com</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Maa Computer Institute. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

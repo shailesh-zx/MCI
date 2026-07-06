@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Aap apne admin panel ya private folders ko yahan disallow kar sakte hain agar future mein add karein
+# Disallow: /private-folder/
+
+# Apni website ka actual sitemap URL yahan update karein
+Sitemap: https://www.yourdomain.com/sitemap.xml

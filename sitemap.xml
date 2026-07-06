@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <!-- Main Pages -->
+   <url>
+      <loc>https://maacomputerinstitute.in/</loc>
+      <lastmod>2026-07-01</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.00</priority>
+   </url>
+   <url>
+      <loc>https://maacomputerinstitute.in/index.html</loc>
+      <lastmod>2026-07-01</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.90</priority>
+   </url>
+
+   <!-- Specific Sections via Anchor Links -->
+   <url>
+      <loc>https://maacomputerinstitute.in/index.html#branches</loc>
+      <lastmod>2026-07-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://maacomputerinstitute.in/index.html#courier</loc>
+      <lastmod>2026-07-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.80</priority>
+   </url>
+
+   <!-- Course Layout Page -->
+   <url>
+      <loc>https://maacomputerinstitute.in/course.html</loc>
+      <lastmod>2026-07-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.80</priority>
+   </url>
+
+   <!-- All Individual Courses -->
+   <url>
+      <loc>https://maacomputerinstitute.in/course.html?id=diploma</loc>
+      <lastmod>2026-07-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.70</priority>
+   </url>
+   <url>
+      <loc>https://maacomputerinstitute.in/course.html?id=office</loc>
+      <lastmod>2026-07-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.70</priority>
+   </url>
+   <url>
+      <loc>https://maacomputerinstitute.in/course.html?id=hardware</loc>
+      <lastmod>2026-07-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.70</priority>
+   </url>
+   <url>
+      <loc>https://maacomputerinstitute.in/course.html?id=accounting</loc>
+      <lastmod>2026-07-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.70</priority>
+   </url>
+   <url>
+      <loc>https://maacomputerinstitute.in/course.html?id=design</loc>
+      <lastmod>2026-07-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.70</priority>
+   </url>
+   <url>
+      <loc>https://maacomputerinstitute.in/course.html?id=internet</loc>
+      <lastmod>2026-07-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.70</priority>
+   </url>
+   <url>
+      <loc>https://maacomputerinstitute.in/course.html?id=typing</loc>
+      <lastmod>2026-07-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.70</priority>
+   </url>
+   <url>
+      <loc>https://maacomputerinstitute.in/course.html?id=english</loc>
+      <lastmod>2026-07-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.70</priority>
+   </url>
+</urlset>
