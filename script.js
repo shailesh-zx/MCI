@@ -487,10 +487,11 @@ const courseData = {
 };
 
 // 6. Real-time Router Routing Injection & Interactive Accordion Setup
-if (window.location.pathname.includes('course')) {
+const container = document.getElementById('course-detail-container');
+
+if (container) {
     const urlParams = new URLSearchParams(window.location.search);
     const categoryId = urlParams.get('id');
-    const container = document.getElementById('course-detail-container');
 
     if (categoryId && courseData[categoryId]) {
         const data = courseData[categoryId];
@@ -561,7 +562,6 @@ if (window.location.pathname.includes('course')) {
         const interactiveCards = container.querySelectorAll('.interactive-timeline-card');
         interactiveCards.forEach(card => {
             card.addEventListener('click', function(e) {
-                // Ensure Accordion items inner clicks don't re-trigger toggle
                 if (e.target.closest('.course-timeline-accordion') && !e.target.closest('.timeline-meta')) {
                     return;
                 }
