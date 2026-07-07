@@ -487,14 +487,14 @@ const courseData = {
 };
 
 // 6. Real-time Router Routing Injection & Interactive Accordion Setup
-document.addEventListener('DOMContentLoaded', () => {
+function initializeCourseRendering() {
     if (window.location.pathname.includes('course')) {
         const urlParams = new URLSearchParams(window.location.search);
         const categoryId = urlParams.get('id');
         const container = document.getElementById('course-detail-container');
 
         if (!container) {
-            console.error("Course container not found on this page.");
+            console.error("MCI Router Error: 'course-detail-container' HTML par nahi mila. Cloudflare shyd galat file serve kar raha hai.");
             return; 
         }
 
@@ -567,7 +567,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const interactiveCards = container.querySelectorAll('.interactive-timeline-card');
             interactiveCards.forEach(card => {
                 card.addEventListener('click', function(e) {
-                    // Ensure Accordion items inner clicks don't re-trigger toggle
                     if (e.target.closest('.course-timeline-accordion') && !e.target.closest('.timeline-meta')) {
                         return;
                     }
@@ -602,4 +601,11 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
     }
-});
+}
+
+// Ensure execution happens safely regardless of how Cloudflare handles script loading
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeCourseRendering);
+} else {
+    initializeCourseRendering();
+}
