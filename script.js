@@ -487,112 +487,119 @@ const courseData = {
 };
 
 // 6. Real-time Router Routing Injection & Interactive Accordion Setup
-if (window.location.pathname.includes('course')) {
-    const urlParams = new URLSearchParams(window.location.search);
-    const categoryId = urlParams.get('id');
-    const container = document.getElementById('course-detail-container');
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.location.pathname.includes('course')) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const categoryId = urlParams.get('id');
+        const container = document.getElementById('course-detail-container');
 
-    if (categoryId && courseData[categoryId]) {
-        const data = courseData[categoryId];
-        
-        let htmlContent = `
-            <a href="index.html#courses" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Courses</a>
+        if (!container) {
+            console.error("Course container not found on this page.");
+            return; 
+        }
+
+        if (categoryId && courseData[categoryId]) {
+            const data = courseData[categoryId];
             
-            <div class="course-detail-header">
-                <div class="icon-wrapper">${data.icon}</div>
-                <h1>${data.title}</h1>
-                <p>${data.desc}</p>
-                <div style="margin-top: 15px; color: #2563eb; font-weight: bold; font-size: 14px; background: #eff6ff; display: inline-block; padding: 6px 16px; border-radius: 50px;">
-                    💡 Click on any course to view its Fee & Full Schedule Timeline Roadmap!
+            let htmlContent = `
+                <a href="index.html#courses" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Courses</a>
+                
+                <div class="course-detail-header">
+                    <div class="icon-wrapper">${data.icon}</div>
+                    <h1>${data.title}</h1>
+                    <p>${data.desc}</p>
+                    <div style="margin-top: 15px; color: #2563eb; font-weight: bold; font-size: 14px; background: #eff6ff; display: inline-block; padding: 6px 16px; border-radius: 50px;">
+                        💡 Click on any course to view its Fee & Full Schedule Timeline Roadmap!
+                    </div>
                 </div>
-            </div>
-            
-            <div class="grid-container">
-        `;
+                
+                <div class="grid-container">
+            `;
 
-        data.courses.forEach((course, index) => {
-            let timelineHtml = '';
-            if (course.timeline && course.timeline.length > 0) {
-                timelineHtml = `
-                    <div class="course-timeline-accordion" id="accordion-${index}">
-                        <div class="timeline-meta">
-                            <span class="meta-item"><i class="fa-solid fa-clock"></i> <strong>Duration:</strong> ${course.duration}</span>
-                            <span class="meta-item fee-badge"><i class="fa-solid fa-indian-rupee-sign"></i> <strong>Fee:</strong> ${course.fee}</span>
-                        </div>
-                        <h4 class="timeline-title">Complete Step-by-Step Training Schedule:</h4>
-                        <div class="timeline-steps">
-                `;
-                course.timeline.forEach(step => {
-                    timelineHtml += `
-                        <div class="timeline-step-item">
-                            <div class="step-time">${step.time}</div>
-                            <div class="step-content">
-                                <h5>${step.topic}</h5>
-                                <p>${step.details}</p>
+            data.courses.forEach((course, index) => {
+                let timelineHtml = '';
+                if (course.timeline && course.timeline.length > 0) {
+                    timelineHtml = `
+                        <div class="course-timeline-accordion" id="accordion-${index}">
+                            <div class="timeline-meta">
+                                <span class="meta-item"><i class="fa-solid fa-clock"></i> <strong>Duration:</strong> ${course.duration}</span>
+                                <span class="meta-item fee-badge"><i class="fa-solid fa-indian-rupee-sign"></i> <strong>Fee:</strong> ${course.fee}</span>
+                            </div>
+                            <h4 class="timeline-title">Complete Step-by-Step Training Schedule:</h4>
+                            <div class="timeline-steps">
+                    `;
+                    course.timeline.forEach(step => {
+                        timelineHtml += `
+                            <div class="timeline-step-item">
+                                <div class="step-time">${step.time}</div>
+                                <div class="step-content">
+                                    <h5>${step.topic}</h5>
+                                    <p>${step.details}</p>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    timelineHtml += `</div></div>`;
+                }
+
+                htmlContent += `
+                    <div class="card course-detail-card interactive-timeline-card" data-target="accordion-${index}" style="grid-column: span 4;">
+                        <div class="card-main-info">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
+                                <h3 style="margin-bottom: 6px; color: #1e3a8a;">${course.name}</h3>
+                                <span class="preview-fee-btn"><i class="fa-solid fa-chevron-down"></i> View Details</span>
+                            </div>
+                            <p class="sub-course-desc">${course.desc}</p>
+                            <div class="card-preview-meta">
+                                <span><i class="fa-solid fa-calendar-days"></i> Duration: ${course.duration}</span>
+                                <span><i class="fa-solid fa-wallet"></i> Fee: ${course.fee.split(' ')[0]}</span>
                             </div>
                         </div>
-                    `;
-                });
-                timelineHtml += `</div></div>`;
-            }
-
-            htmlContent += `
-                <div class="card course-detail-card interactive-timeline-card" data-target="accordion-${index}" style="grid-column: span 4;">
-                    <div class="card-main-info">
-                        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
-                            <h3 style="margin-bottom: 6px; color: #1e3a8a;">${course.name}</h3>
-                            <span class="preview-fee-btn"><i class="fa-solid fa-chevron-down"></i> View Details</span>
-                        </div>
-                        <p class="sub-course-desc">${course.desc}</p>
-                        <div class="card-preview-meta">
-                            <span><i class="fa-solid fa-calendar-days"></i> Duration: ${course.duration}</span>
-                            <span><i class="fa-solid fa-wallet"></i> Fee: ${course.fee.split(' ')[0]}</span>
-                        </div>
+                        ${timelineHtml}
                     </div>
-                    ${timelineHtml}
+                `;
+            });
+
+            htmlContent += `</div>`;
+            container.innerHTML = htmlContent;
+
+            // Interactive Accordion Dynamic Click Events
+            const interactiveCards = container.querySelectorAll('.interactive-timeline-card');
+            interactiveCards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    // Ensure Accordion items inner clicks don't re-trigger toggle
+                    if (e.target.closest('.course-timeline-accordion') && !e.target.closest('.timeline-meta')) {
+                        return;
+                    }
+                    
+                    const targetId = this.getAttribute('data-target');
+                    const accordion = document.getElementById(targetId);
+                    const toggleBtn = this.querySelector('.preview-fee-btn');
+                    
+                    if (accordion) {
+                        const isOpen = accordion.classList.contains('open');
+                        
+                        if (isOpen) {
+                            accordion.classList.remove('open');
+                            this.classList.remove('active-card');
+                            if (toggleBtn) toggleBtn.innerHTML = '<i class="fa-solid fa-chevron-down"></i> View Details';
+                        } else {
+                            accordion.classList.add('open');
+                            this.classList.add('active-card');
+                            if (toggleBtn) toggleBtn.innerHTML = '<i class="fa-solid fa-chevron-up"></i> Close Details';
+                        }
+                    }
+                });
+            });
+
+        } else {
+            container.innerHTML = `
+                <div class="text-center" style="padding: 100px 0;">
+                    <h2 style="font-size: 32px; color: #111827;">Course Category Not Found</h2>
+                    <p style="margin-top: 15px; margin-bottom: 30px; color: #6b7280;">The course category you are looking for does not exist.</p>
+                    <a href="index.html#courses" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Return to Homepage</a>
                 </div>
             `;
-        });
-
-        htmlContent += `</div>`;
-        container.innerHTML = htmlContent;
-
-        // Interactive Accordion Dynamic Click Events
-        const interactiveCards = container.querySelectorAll('.interactive-timeline-card');
-        interactiveCards.forEach(card => {
-            card.addEventListener('click', function(e) {
-                // Ensure Accordion items inner clicks don't re-trigger toggle
-                if (e.target.closest('.course-timeline-accordion') && !e.target.closest('.timeline-meta')) {
-                    return;
-                }
-                
-                const targetId = this.getAttribute('data-target');
-                const accordion = document.getElementById(targetId);
-                const toggleBtn = this.querySelector('.preview-fee-btn');
-                
-                if (accordion) {
-                    const isOpen = accordion.classList.contains('open');
-                    
-                    if (isOpen) {
-                        accordion.classList.remove('open');
-                        this.classList.remove('active-card');
-                        if (toggleBtn) toggleBtn.innerHTML = '<i class="fa-solid fa-chevron-down"></i> View Details';
-                    } else {
-                        accordion.classList.add('open');
-                        this.classList.add('active-card');
-                        if (toggleBtn) toggleBtn.innerHTML = '<i class="fa-solid fa-chevron-up"></i> Close Details';
-                    }
-                }
-            });
-        });
-
-    } else {
-        container.innerHTML = `
-            <div class="text-center" style="padding: 100px 0;">
-                <h2 style="font-size: 32px; color: #111827;">Course Category Not Found</h2>
-                <p style="margin-top: 15px; margin-bottom: 30px; color: #6b7280;">The course category you are looking for does not exist.</p>
-                <a href="index.html#courses" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Return to Homepage</a>
-            </div>
-        `;
+        }
     }
-}
+});
