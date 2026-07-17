@@ -5,4 +5,4 @@ Allow: /
 # Disallow: /private-folder/
 
 # Apni website ka actual sitemap URL yahan update karein
-Sitemap: https://www.yourdomain.com/sitemap.xml
+Sitemap: https://maacomputerinstitute.com/sitemap.xml
