@@ -153,7 +153,7 @@ const courseData = {
                 name: "DOA (Diploma in Office Automation)", 
                 desc: "Focused purely on official business administration and accounting operations.",
                 duration: "3 Months",
-                fee: "₹2,200 Total",
+                fee: "₹3,000 Total",
                 timeline: [
                     { time: "Month 1", topic: "Corporate Documentation", details: "Official letterheads, multi-layer formatting, billing records, and automated templates in MS Word." },
                     { time: "Month 2", topic: "Advanced Spreadsheet Calculations", details: "Data filtration, business math functions, dynamic financial charts, and pivot reporting in MS Excel." },
@@ -164,7 +164,7 @@ const courseData = {
                 name: "DTP (Desk Top Publishing)", 
                 desc: "Graphic production and print media configuration course.",
                 duration: "3 Months",
-                fee: "₹2,800 Total",
+                fee: "₹3,000 Total",
                 timeline: [
                     { time: "Month 1", topic: "Photo Graphics via Photoshop", details: "Layer structures, background extractions, skin texture editing, and creative banner designs." },
                     { time: "Month 2", topic: "Vector Arts via CorelDRAW", details: "Creating scalable logo grids, flex marketing boards, geometric designs, and colorful pamflets." },
@@ -294,7 +294,7 @@ const courseData = {
                 name: "Tally ERP 9", 
                 desc: "Manage full company accounts using legacy accounting software frameworks.",
                 duration: "2 Months",
-                fee: "₹2,800 Total",
+                fee: "₹10,000 Total",
                 timeline: [
                     { time: "Month 1", topic: "Company Setup & Voucher Postings", details: "Creating business profiles, creating structural ledgers, passing receipt, payment, sales, and purchase logs." },
                     { time: "Month 2", topic: "Inventory Metrics & Tax Ledgers", details: "Tracking stock items, item units, generating custom sales bills with basic VAT/GST layers, and profit reports." }
@@ -304,7 +304,7 @@ const courseData = {
                 name: "Tally Prime", 
                 desc: "Master the next generation of modern computerized cloud accounting.",
                 duration: "2.5 Months",
-                fee: "₹3,400 Total",
+                fee: "₹15,000 Total",
                 timeline: [
                     { time: "Month 1", topic: "Modern UI Navigation & Advanced Ledgers", details: "Working with the data hub dashboard, multiple currencies configurations, and flexible corporate ledger groups." },
                     { time: "Month 2", topic: "Comprehensive GST & Taxation Modules", details: "Enabling CGST, SGST, IGST parameters, creating tax invoices, e-way bill insights, and GSTR report calculations." },
@@ -428,7 +428,7 @@ const courseData = {
                 name: "Hindi Typing Mastery", 
                 desc: "Standard layout architectures required for north India state govt jobs.",
                 duration: "45 Days",
-                fee: "₹1,200 Total",
+                fee: "₹1,000 Total",
                 timeline: [
                     { time: "Days 1-15", topic: "Kruti Dev 010 Character Layouts", details: "Learning individual Hindi character alignments on the QWERTY frame, home row vowels mappings." },
                     { time: "Days 16-30", topic: "Shift Keys Special Codes Mastery", details: "Typing complex half-characters, joint vowel symbols, and executing ALT code shortcuts for rare accents." },
@@ -446,7 +446,7 @@ const courseData = {
                 name: "Grammar & Vocabulary", 
                 desc: "Build absolute command over basic syntax and sentences structures.",
                 duration: "2 Months",
-                fee: "₹1,800 Total",
+                fee: "₹1,000 Total",
                 timeline: [
                     { time: "Month 1", topic: "Tenses & Structural Sentence Foundations", details: "Understanding time frames (Past, Present, Future), modal verbs rules, active-passive voice usages, and daily speaking habits." },
                     { time: "Month 2", topic: "Professional Word Banks & Conversational Phrases", details: "Building 500+ standard vocabulary items, understanding idioms, replacing broken phrases, and formal written expressions." }
@@ -456,7 +456,7 @@ const courseData = {
                 name: "Fluency Practice", 
                 desc: "Eliminate stage fright and build long speech expressions.",
                 duration: "2 Months",
-                fee: "₹1,800 Total",
+                fee: "₹1,000 Total",
                 timeline: [
                     { time: "Month 1", topic: "Stage Fear Removal & Storytelling Prompts", details: "Unlocking speech blockages, practicing real-time loud readings, narrative building loops, and picture definitions." },
                     { time: "Month 2", topic: "Group Debates & Public Speech Drills", details: "Handling impromptu topics (JAM sessions), participating in structured group arguments, and learning vocal inflections." }
@@ -466,7 +466,7 @@ const courseData = {
                 name: "Interview Preparation", 
                 desc: "Prepare yourself to clear entry-level corporate or tech roles smoothly.",
                 duration: "1 Month",
-                fee: "₹1,500 Total",
+                fee: "₹5,00 Total",
                 timeline: [
                     { time: "Weeks 1-2", topic: "Professional Resumes & Corporate Body Aesthetics", details: "Drafting high-impact job profiles, learning formal body gestures, eye contact habits, and grooming rules." },
                     { time: "Weeks 3-4", topic: "HR Query Formats & Live Mock Interviews", details: "Practicing answers for 'Tell me about yourself', salary negotiations, handling stress queries, and face-to-face evaluation." }
@@ -476,7 +476,7 @@ const courseData = {
                 name: "Personality Development", 
                 desc: "Overall shift toward confident, communicative behavior patterns.",
                 duration: "1 Month",
-                fee: "₹1,500 Total",
+                fee: "₹5,00 Total",
                 timeline: [
                     { time: "Weeks 1-2", topic: "Social Etiquette & Behavioral Adjustments", details: "Greeting styles, proactive listening habits, telephone manners, handling group settings, and building positive mindsets." },
                     { time: "Weeks 3-4", topic: "Leadership Skills & Conflict Resolutions", details: "Time management modules, basic problem-solving methodologies, speaking with authority, and team alignment dynamics." }
