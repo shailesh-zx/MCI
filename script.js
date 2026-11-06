@@ -9,15 +9,50 @@ if (menuToggle) {
         navLinks.classList.add('active');
         menuOverlay.classList.add('active');
         document.body.classList.add('no-scroll');
+        menuToggle.setAttribute('aria-expanded', 'true');
     }
     function closeMobileMenu() {
         navLinks.classList.remove('active');
         menuOverlay.classList.remove('active');
         document.body.classList.remove('no-scroll');
+        menuToggle.setAttribute('aria-expanded', 'false');
     }
-    menuToggle.addEventListener('click', openMobileMenu);
+    let pointerStart = null;
+    let draggedMenuButton = false;
+
+    menuToggle.addEventListener('pointerdown', (event) => {
+        pointerStart = { x: event.clientX, y: event.clientY };
+        draggedMenuButton = false;
+    });
+    menuToggle.addEventListener('pointermove', (event) => {
+        if (!pointerStart) return;
+        const distance = Math.hypot(event.clientX - pointerStart.x, event.clientY - pointerStart.y);
+        if (distance > 12) draggedMenuButton = true;
+    });
+    menuToggle.addEventListener('pointerup', () => {
+        if (draggedMenuButton) {
+            menuToggle.dataset.ignoreClick = 'true';
+            setTimeout(() => delete menuToggle.dataset.ignoreClick, 0);
+        }
+        pointerStart = null;
+    });
+    menuToggle.addEventListener('pointercancel', () => { pointerStart = null; draggedMenuButton = false; });
+    menuToggle.addEventListener('click', (event) => {
+        if (menuToggle.dataset.ignoreClick === 'true') {
+            delete menuToggle.dataset.ignoreClick;
+            event.preventDefault();
+            return;
+        }
+        openMobileMenu();
+    });
     closeMenu.addEventListener('click', closeMobileMenu);
     menuOverlay.addEventListener('click', closeMobileMenu);
+    navLinks.querySelectorAll('a:not(.dropdown-toggle)').forEach((link) => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeMobileMenu();
+    });
 }
 
 // 2. Navigation Contact Dropdown Trigger
@@ -101,6 +136,29 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typewriterEl) {
         playTypewriter();
     }
+
+    const revealTargets = document.querySelectorAll('.section-title, .card, .branch-card, .courier-section .container, .footer-col');
+    revealTargets.forEach((element, index) => {
+        element.classList.add('reveal');
+        if (element.classList.contains('card')) {
+            element.style.transitionDelay = `${(index % 4) * 70}ms`;
+        }
+    });
+
+    if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        revealTargets.forEach((element) => revealObserver.observe(element));
+    } else {
+        revealTargets.forEach((element) => element.classList.add('is-visible'));
+    }
+
 });
 
 // 5. Rich Expanded Database with Timeframes & Course Fees
@@ -562,6 +620,12 @@ function initializeCourseRendering() {
 
             htmlContent += `</div>`;
             container.innerHTML = htmlContent;
+
+            container.querySelectorAll('.course-detail-header, .course-detail-card').forEach((element, index) => {
+                element.classList.add('reveal');
+                element.style.transitionDelay = `${Math.min(index, 5) * 70}ms`;
+                requestAnimationFrame(() => element.classList.add('is-visible'));
+            });
 
             // Interactive Accordion Dynamic Click Events
             const interactiveCards = container.querySelectorAll('.interactive-timeline-card');
